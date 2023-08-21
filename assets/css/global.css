@@ -1,0 +1,19 @@
+
+
+body{
+    background-color: #f6f8fc;
+}
+
+
+ @media screen and (min-width: 992px){
+    .content{
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem ;
+    }
+ }
+
+
+
+

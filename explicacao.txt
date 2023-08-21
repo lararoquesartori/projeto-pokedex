@@ -1,0 +1,61 @@
+protocolo orientado cliente servidor: http que usamos na internet
+-> cliente solicita ao servidor, servirdor processa a solicitação e devolve uma res-
+posta ao cliente
+
+https://-->(tem camada de segurança com criptografia);
+
+cliente(browser) ---- servidor(servidor do google)
+
+127.0.0.1 : ip
+8080: porta
+
+ip + porta: caminho do http server daquela pagina na web
+
+http-server: mapeia a pasta do projeto e retorna o que esta sendo solicitado
+
+http://192.168.1.106:8080: rede local, da pra ver pelo celular, bom para ver o projeto em forma responsiva
+
+
+html: linguagem de marcação de texto, significando-o(html esta similiar a um word)
+
+manter-se atento as tags htlm pois serão uteis, aplicar de forma organizada, semantica
+auxilia pessoas pcd a navegar de forma facil nesses sites
+
+css: estilo dos textos
+javascript: comportamento do html, dinamicamente aplicado
+
+diferenca de interpretação de css entre os browsers: cada um tem seus
+ estilos padroes definidos
+-> normalize: css que padroniza todo o estilo inicial para todos os navegadores
+
+api: servidor de dados
+
+requisição http: composta de= url, request (methodes,header, body), response(status code, header, body)
+
+algo vai ser requisitado, o que sera feito com essa requisição e dito pelo metodo
+
+->url: ip + caminho de id do enenedereço do recurso=tificação do recurso
+    -> ex: https://pokeapi.co(ip) + / + api/v2/pokemon
+
+->tipo de solicitação: GET(buscar), POST(inseir), PUT(atualizar), DELETE(deletar), PATCH, etc
+
+-> a primeira forma que temos de transferir dados é pelo caminho de id do enenedereço do recurso, ou path
+-> a segunda forma é a query string: descrição de busca, quadno faz-se um GETpassa-se padrão de busca, ex: quero pokemos que iniciam com a letar I;
+    ->caminho ? query string, ex: https://pokeapi.co(ip)/api/v2/pokemon?type=grass&name=i, buscando poquemos que tem o tipo grama e nome iniciados em i
+    -> chave valor, name = i, type = grass
+    -> ex: https://pokeapi.co(ip)/api/v2/pokemon?offset=0&limit=2, paginando, começa no 0 e quando pagina na frente daquele serão buscadas, no caso, duas, ou seja, encontra-rá as paginas 1 e 2
+
+-> outras areas de dados são reques headers e response headers: transmitem e recebem coisas do servidor
+    ->headers: são configurações da requisição, da api, passam-se dados que fazem sentido pra requisição
+    -> ex: acepts: o que ele aceita como resposta, pode ser so texto, imagem, video, link etc,
+    e o que eh respondido pode ser algo entre as opções dadas , ou seja o response diz o que foi respondido e o request diz o que pode ser respondido
+    ->ex2: autenticação, as credenciais de autenticação são passadas no header
+
+-> a ultima forma de se passar e receber informação é pelo body: dado que eu quero trafegar na requisição
+    -> o get, por exemplo, nao tem body, ja o post, put, patch stem, pq a forma de enviar os dados deve ser pelo body
+    -> exemplo: (post) quero cadastrar um pokemon novo, no reader eu passo a linguagem que vai ser enviado e no body o codigo naquela linguagem
+    -> body pode ter tanto na requisição quanto na resposta
+    -> status code: 200(sucesso), 300(falha), 400(erro do cliente), 500(erro do servidor)
+    -> o status code em si pode ser ja a resposta, ou seja, não precisa ter um body (mas pode ter)
+
+
