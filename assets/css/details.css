@@ -1,0 +1,119 @@
+body{
+    background-color: #77c850;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.top{
+    margin:0 15rem;
+    
+}
+.fas {
+    margin: 1rem;
+}
+.nameAndId{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.namePokemon{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 3rem;
+    text-transform: capitalize; 
+}
+.idPokemon{
+    margin: 0;
+    margin-right: 5rem;
+    padding: 0;
+    color: #fff;
+    opacity: 70%;
+}
+.types{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 0;
+    text-align: left;
+    
+}
+.type{
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 3rem;
+ }
+
+.pokemonPicture{
+    max-width: 100%;/*não sair do tamamnho maximo*/
+    height: 170px;
+
+}
+.bottom{
+    background-color: #fff;
+    border-radius: 15% 15% 0 0;
+    margin: 0;
+    padding: 3rem 5rem;
+}
+.datailsContent{
+    padding: 0;
+    margin: 3rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 0;
+    text-align: left;
+}
+.tableHead{
+    list-style: none;
+    padding: 1rem;
+    font-weight: bolder;
+}
+.tableHead .line{
+    padding: 1rem;
+    color: darkslategrey;
+}
+
+.tableData{
+    list-style: none;
+    padding: 1rem;
+    color: darkgreen;
+}
+.tableData .line{
+    padding: 1rem;
+}
+.weaknessTitle{
+    color: darkslategrey;
+    margin-bottom: 2rem;
+}
+.weakness{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.oneWeakness{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #77c850;
+    border-radius: 20%;
+    color: darkgreen;
+}
+
+.evolutionContent{
+    align-items: center;
+}
+.evolution{
+    list-style: none;
+}
+.pokemonPictureEvolution{
+    max-width: 100%;/*não sair do tamamnho maximo*/
+    height: 100px;
+}
