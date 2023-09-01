@@ -1,11 +1,14 @@
 const pokemonList = document.getElementById('pokemonList')
+const tableData = document.getElementById('tableData')
+const evolution = document.getElementById('evolution')
+const weakness = document.getElementById('weakness')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const limit = 10;
 let offset = 0;
 
 const maxRecords = 151;//se a quantidade e itens da paginafor maior ou igual ao limite, retira o botão de ler mais
 //151: numero de pokemons da primeira geração
-function loadPokemonItens(offset, limit){
+function loadPokemonItensInIndex(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
 
         pokemonList.innerHTML += pokemons.map((pokemon) => `
@@ -28,17 +31,28 @@ function loadPokemonItens(offset, limit){
 
 }
 
-loadPokemonItens(offset, limit)
+loadPokemonItensInIndex(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit// aumenta o offset de 10 em 10(tam do limite) a cada click no no botão
      const qtdRecordNexPage = offset + limit//quanto a quantidade maximo de registros da proxima pagina deve ser
     if(qtdRecordNexPage >= maxRecords){//se o numer de registros da proxia pagina for maior que o numero maximo total de registros a serem exibidos
         const newLimit = maxRecords - offset;//limite muda o valor
-        loadPokemonItens(offset, newLimit)//chama a função para esse novo limite
+        loadPokemonItensInIndex(offset, newLimit)//chama a função para esse novo limite
         loadMoreButton.parentElement.removeChild(loadMoreButton);//desabilita o botão chamando o pai dele
 
     }else{
-        loadPokemonItens(offset, limit)//se não, continua normal chamadno as paginas
+        loadPokemonItensInIndex(offset, limit)//se não, continua normal chamadno as paginas
     }
 })
+
+
+/*function loadPokemonDatailsInDatailPage(pokemon){
+        tableData.innerHTML = `
+                            <li class="line">`${pokemon.abilities}`</li>
+                            <li class="line">`${pokemon.category}`</li>
+                            <li class="line">`${pokemon.gender}`</li>
+                            <li class="line">`${pokemon.height}`</li>
+                            <li class="line">`${pokemon.weight}`</li`
+
+}*/
